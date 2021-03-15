@@ -1,8 +1,8 @@
 import os
 
 class Config:
-    file = os.path.realpath(__file__)
-    ProjectFolder = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(file))))
+    file = os.getcwd()
+    ProjectFolder = os.path.dirname(os.path.dirname(os.path.dirname(file)))
     RootFolder = os.path.dirname(ProjectFolder)
     DataFolder = os.path.join(RootFolder, "pixelcompetition-data")  # TODO set you data folder here
 
@@ -17,6 +17,7 @@ class Config:
     WebFolder = os.path.join(ProjectFolder, "web")
 
     ImageFolder = os.path.join(DocFolder, "img")
+    Images = None
 
     SystemFontFolder = "C:\\Windows\\fonts" #TODO setup your ttf-Font-Folder
 
@@ -29,8 +30,29 @@ class Config:
         report = "found at" if os.path.exists(folder) else "not found at"
         print (name, report, folder)
 
+    def getLogoPath(self):
+        return os.path.join(self.ImageFolder, "logo.png")
+
+    def getFiles (self, folder):
+        for item in os.listdir(folder):
+            path = os.path.join(folder, item)
+            if os.path.isdir(path):
+                for sub in self.getFiles(path):
+                    yield sub
+            if os.path.isfile(path):
+                yield path
+
     def getImages(self):
-        return []
+        if self.Images:
+            return self.Images
+        self.Images = list(filter(lambda x: x.lower().endswith(".png") or x.lower().endswith(".jpg"),
+                                  self.getFiles(self.ImageFolder)))
+        return self.Images
+
+    def getImagesByCategory(self, name):
+        folder = os.path.join(self.ImageFolder, name)
+        return filter(lambda x: x.lower().endswith(".png") or x.lower().endswith(".jpg"),
+                                  self.getFiles(folder))
 
     def getDataFileName(self, name):
         return os.path.join(self.DataFolder, name)
@@ -45,6 +67,24 @@ class Config:
         fontFolder = self.getDataFileName("allFonts")
         if not os.path.exists(fontFolder) : os.mkdir(fontFolder)
         return fontFolder
+
+    def loadFile(self, filename):
+        print ("Load", filename)
+        if not os.path.exists(fileName):
+            return []
+        with codecs.open(fileName, "r", encoding='utf-8') as infile:
+            lines = []
+            for line in infile.readlines():
+                line = line.strip()
+                lines.append(line)
+        return lines
+
+
+    def loadRiddles(self, competition):
+        return zip(
+            self.loadFile(os.path.join(self.DataFolder, competition + ".questions.txt")),
+            self.loadFile(os.path.join(self.DataFolder, competition + ".answers.txt"))
+        )
 
     def __init__(self):
         self.reportFolder("RootFolder", self.RootFolder)
@@ -64,7 +104,6 @@ class Config:
 
         self.reportFolder("SystemFontFolder", self.SystemFontFolder)
 
-
 if __name__ == "__main__":
     print("Start")
     cfg = Config()
@@ -72,5 +111,3 @@ if __name__ == "__main__":
     for image in cfg.getImages():
         print (image)
     print("Done")
-
-Cfg = Config()
