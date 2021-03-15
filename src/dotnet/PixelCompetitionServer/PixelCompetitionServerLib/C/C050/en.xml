@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+<CompetitionMetaData>
+  <Name>Competition that implements a simple snail drawing protocol</Name>
+  <Urls>
+    https://wiki.maglab.space/wiki/PixelCompetition/B050
+  </Urls>
+  <Welcome>Welcome to a competition with a snail drawing your image</Welcome>
+  <Help>
+    This Competition implements a snail drawing protocol. You are allowed to set your starting position once per session.
+    From your starting position the following pixel are drawn following the path of a snail shell:
+
+    25--26--27--28--29
+    ||
+    24  09--10--11--12
+    ||  ||          ||
+    23  08  01--02  13
+    ||  ||  ||  ||  ||
+    22  07  00  03  14
+    ||  ||      ||  ||
+    21  06--05--04  15
+    ||              ||
+    20--19--18--17--16
+
+    ST {x} {y}
+    x:     x-Coordinate of start position
+    y:     y-Coordinate of start position
+
+    PX {r} {g} {b}
+    - or -
+    PX #{color}
+    r:     red color component of a pixel
+    g:     green color component of a pixel
+    b:     blue color component of a pixel
+
+    color: color encoded as a html color (rgb-values as hex)
+
+  </Help>
+</CompetitionMetaData>

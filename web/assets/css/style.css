@@ -1,0 +1,149 @@
+/*
+    Generals
+*/
+
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #888;
+    line-height: 30px;
+    text-align: center;
+}
+
+strong, b { font-weight: 600; }
+
+a, a:hover, a:focus, a:visited {
+    color: #007bff;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+h1, h2 {
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    color: #555;
+    line-height: 50px;
+}
+
+
+/*
+    Navigation Bar
+*/
+
+.navbar {
+    background: #444;
+    -o-transition: all .6s;
+    -moz-transition: all .6s;
+    -webkit-transition: all .6s;
+    -ms-transition: all .6s;
+    transition: all .6s;
+    backface-visibility: hidden;
+}
+
+.navbar.navbar-no-bg {
+    background: #444;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.navbar-dark .navbar-nav {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    border: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #fff;
+    outline: 0;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar-brand {
+    width: 136px;
+    background: url(../img/logo.png) left center no-repeat;
+    border: 0;
+    text-indent: -99999px;
+}
+
+
+/*
+    Start
+ */
+
+.top-content {
+    padding: 210px 0;
+}
+
+.top-content .text {
+    color: #007bff;
+}
+
+.top-content .text h1 {
+    margin-top: 25px;
+    color: #007bff;
+    color: #007bff;
+}
+
+.top-content .description {
+    margin: 30px 0 10px 0;
+}
+
+.top-content .description p {
+    opacity: 0.8;
+}
+
+.top-content .top-big-link {
+    margin-top: 45px;
+}
+
+.section-container{
+    text-align: left;
+}
+
+.section-container p{
+    hyphens: auto;
+    text-align: justify;
+}
+
+.btn-link-1 {
+    display: inline-block;
+    height: 50px;
+    margin: 0 5px;
+    padding: 0 28px;
+    background: #007bff;
+    background: rgba(0, 123, 255, 0.7);
+    border: 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #fff;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+.btn-link-1:hover, .btn-link-1:focus, .btn-link-1:active, .btn-link-1:active:focus,
+.btn-link-1.btn-primary:not(:disabled):not(.disabled):active,
+.btn-link-1.btn-primary:not(:disabled):not(.disabled):active:focus {
+    background: #007bff;
+    background: rgba(0, 123, 255, 0.9);
+    outline: 0;
+    color: #fff;
+    box-shadow: none;
+}

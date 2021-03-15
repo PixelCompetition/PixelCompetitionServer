@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<CompetitionMetaData>
+  <Name>Pixel Competition</Name>
+  <Urls>
+    https://wiki.maglab.space/wiki/PixelCompetition
+  </Urls>
+  <Welcome>PixelCompetition brought to you by Magrathea Laboratories - creators of new worlds (mag.lab), Fuldas finest Hackerspace since 2014</Welcome>
+  <Help>
+    help                  - Shows help page.
+    lang                  - Shows available languages.
+    lang {xx}             - Select language by country code xx, e.g. de, en
+    competition {detail}  - Shows details for running competition, available details are
+      instruction         - Shows instructions for running competition.
+      urls                - Shows urls with further information.
+      name                - Shows name of the running competition
+      number              - Shows Number of the competition
+  </Help>
+</CompetitionMetaData>

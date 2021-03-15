@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<CompetitionMetaData>
+  <Name>Competition that implements a riddle protocol asking for Ocr</Name>
+  <Urls>
+    https://wiki.maglab.space/wiki/PixelCompetition/C510
+  </Urls>
+  <Welcome>Welcome to the Ocr competition.</Welcome>
+  <Help>
+    This Competition implement a riddle protocol asking for Ocr
+    ASK {x} {y}
+    --> RIDDLE {x} {y} {riddle}
+
+    PX {x} {y} #{color} {result}
+    --> OK
+    --> Nope --> RIDDLE {x} {y} {riddle}
+
+    x:     x-Coordinate of a pixel
+    y:     y-Coordinate of a pixel
+    color: color encoded as a html color (rgb-values as hex)
+
+    ASK returns a {riddle} for the given coordinate, in this competition it returns a url to a image.
+    PX  sets a pixel by providing the {result} of the riddle.
+
+    {result} shall be the text written on the image you downloaded using the url
+
+    NOTE: Others may solve the riddle faster than you, in this case you get back a nope and the current riddle
+  </Help>
+</CompetitionMetaData>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PixelCompetitionServerApp": {
+      "commandName": "Project",
+      "commandLineArgs": "FFPlayWindows.xml"
+    }
+  }
+}

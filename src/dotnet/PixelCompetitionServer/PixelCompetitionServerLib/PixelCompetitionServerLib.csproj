@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="B\B001\en.xml" />
+    <None Remove="B\B003\en.xml" />
+    <None Remove="Common\en.xml" />
+    <None Remove="C\C050\en.xml" />
+    <None Remove="C\C100\en.xml" />
+    <None Remove="C\C180\en.xml" />
+    <None Remove="C\C500\en.xml" />
+    <None Remove="C\C600\en.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="B\B001\en.xml" />
+    <EmbeddedResource Include="B\B003\en.xml" />
+    <EmbeddedResource Include="Common\en.xml" />
+    <EmbeddedResource Include="C\C050\en.xml" />
+    <EmbeddedResource Include="C\C100\en.xml" />
+    <EmbeddedResource Include="C\C180\en.xml" />
+    <EmbeddedResource Include="C\C500\en.xml" />
+    <EmbeddedResource Include="C\C600\en.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<PixelCompetitionServerConfig>
+  <RawVideoInterfaceType>Pipe</RawVideoInterfaceType>
+  <FFMpegCommand>ffmpeg</FFMpegCommand>
+  <FFMpegParams>
+    -re
+    -f rawvideo -pixel_format rgb24 -video_size {CanvasWidth}x{CanvasHeight}
+    -loglevel error
+    -framerate {Framerate}
+    -i unix://{PipeName}
+    -f lavfi -i anullsrc=channel_layout=mono:sample_rate=11025 -c:v libx264 -preset ultrafast
+    -r:v {Framerate} -g:v {2Framerate} -bf:v 1500k -c:a aac
+    -f flv rtmp://a.rtmp.youtube.com/live2/TODO: insert your YoutTube Handle here!
+  </FFMpegParams>
+  <ShowFFMpegOutput>false</ShowFFMpegOutput>
+  <ClientTimeOut>100000</ClientTimeOut>
+</PixelCompetitionServerConfig>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<PixelCompetitionServerConfig>
+  <LocalPort>2342</LocalPort>
+  <Width>1920</Width>
+  <Height>1080</Height>
+  <Framerate>5</Framerate>
+  <VideoTcpHost>127.0.0.1</VideoTcpHost>
+  <VideoTcpPort>4455</VideoTcpPort>
+  <StartCompetitionNumber>B001</StartCompetitionNumber>
+  <DataFolder>/opt/pixelcompetition-data</DataFolder>
+  <InstanceWelcome>Pixel-Competition @ vanilla build from public git-repo</InstanceWelcome>
+  <!-- TODO: fill in the name of your happening -->
+  <FFMpegCommand>ffmpeg</FFMpegCommand>
+  <FFMpegParams>
+    <!--  -loglevel debug
+    #  -threads:v 2
+    #  -threads:a 2
+    #  -filter_threads 2
+    #  -thread_queue_size 512
+    #  -v 9
+    -->
+    -re
+    -f rawvideo -pixel_format argb -video_size {Width}x{Height} -framerate {Framerate}
+    -i unix://{PipeName}
+    -f lavfi -i anullsrc=channel_layout=mono:sample_rate=11025
+    -c:v libx264
+    -preset ultrafast
+    -r:v {Framerate}
+    -g:v {2Framerate}
+    -c:a aac
+    <!--   -bf:v 1500k -->
+    -f flv tcp://192.168.1.96:4455
+  </FFMpegParams>
+  <ShowFFMpegOutput>true</ShowFFMpegOutput>
+</PixelCompetitionServerConfig>

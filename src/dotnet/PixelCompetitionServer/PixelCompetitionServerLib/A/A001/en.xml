@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<CompetitionMetaData>
+  <Name>Null Competition</Name>
+  <Urls>
+    https://wiki.maglab.space/wiki/PixelCompetition
+  </Urls>
+  <Welcome>Base implementation</Welcome>
+  <Help>
+    This competition does nothing.
+  </Help>
+</CompetitionMetaData>

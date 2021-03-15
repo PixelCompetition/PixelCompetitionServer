@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<PixelCompetitionServerConfig>
+  <FFMpegCommand>ffplay</FFMpegCommand>
+  <FFMpegParams>
+    -f rawvideo -pixel_format rgb24 -video_size {CanvasWidth}x{CanvasHeight}
+    -framerate {Framerate} 
+    -i unix://{PipeName}
+  </FFMpegParams>
+  <ShowFFMpegOutput>false</ShowFFMpegOutput>
+</PixelCompetitionServerConfig>

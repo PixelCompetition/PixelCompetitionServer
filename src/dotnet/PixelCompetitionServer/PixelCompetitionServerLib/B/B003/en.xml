@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<CompetitionMetaData>
+  <Name>Competition that implements a simple Turtle protocol</Name>
+  <Urls>
+    https://wiki.maglab.space/wiki/PixelCompetition/B003
+  </Urls>
+  <Welcome>Welcome to the training competition with a turtle</Welcome>
+  <Help>
+    This Competition implement a turtle control protocol.
+    Your turtle starts at [x,y] = [0,0] in direction to up
+    F             : Turtle makes a step forward, without drawing
+    F {r} {g} {b} : Turtle makes a step forward, and draws:
+      r           : red color component of the pixel
+      g           : green color component of the pixel
+      b           : blue color component of the pixel
+    F {color}     : Turtle makes a step forward, and draws:
+      color       : color encoded as a html color (rgb-values as hex)
+    L             : Turtle turns 90 degrees to the left
+    R             : Turtle turn 90 degrees to the left
+  </Help>
+</CompetitionMetaData>

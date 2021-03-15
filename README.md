@@ -1,2 +1,3 @@
-# PixelCompetitionServer
-PixelCompetitionServer public Development
+# PixelCompetition
+
+PixelCompetition

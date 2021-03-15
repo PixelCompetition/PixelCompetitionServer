@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<CompetitionMetaData>
+  <Name>Competition that implements a protocol using polar coordinates</Name>
+  <Urls>
+    https://wiki.maglab.space/wiki/PixelCompetition/C100
+  </Urls>
+  <Welcome>Welcome to the polar coordinate competition.</Welcome>
+  <Help>
+    This Competition implements a protocol using polar coordinates
+    PX {l} {a} {r} {g} {b}
+    - or -
+    PX {l} {a} #{color}
+
+    l:     distance to the center 
+    a:     angle given as ten-thousands of a full circle (1/10000)
+    r:     red color component of a pixel
+    g:     green color component of a pixel
+    b:     blue color component of a pixel
+
+    color: color encoded as a html color (rgb-values as hex)
+  </Help>
+</CompetitionMetaData>

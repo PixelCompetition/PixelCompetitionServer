@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<PixelCompetitionServerConfig>
+  <FFMpegCommand>ffplay.exe</FFMpegCommand>
+  <FFMpegParams>
+    -loglevel panic
+    -loglevel panic
+    -f rawvideo -pixel_format rgb24 -video_size {CanvasWidth}x{CanvasHeight}
+    -framerate {Framerate}
+    -i tcp://{RawVideoTcpHost}:{RawVideoTcpPort}?listen=1&amp;tcp_nodelay=1
+  </FFMpegParams>
+  <ShowFFMpegOutput>true</ShowFFMpegOutput>
+  <ClientTimeOut>100000</ClientTimeOut>
+  <DataFolder>F:\dev\git\mag.lab\prj\pixelcompetition-data</DataFolder>
+  <RawVideoInterface>Tcp</RawVideoInterface>
+
+  <Schedule>
+    <Start>2021-02-20T05:00:00+01:00</Start>
+    <Competition>B001</Competition>
+  </Schedule>
+
+
+</PixelCompetitionServerConfig>
