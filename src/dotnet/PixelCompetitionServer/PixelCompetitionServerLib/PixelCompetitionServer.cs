@@ -9,13 +9,17 @@ using PixelCompetitionServerLib.Common;
 
 namespace PixelCompetitionServerLib
 {
+    /// <summary>
+    /// Server starting TCPListener and start a client handler for each connection.
+    /// This class should be instatiated by <see cref="PixelCompetitionServerApp" /> using a
+    /// <see cref="PixelCompetitionServerConfig" />.
+    /// </summary>
 	public class PixelCompetitionServer
 	{
 		private TcpListener _server;
 		public PixelCompetitionServerConfig Config { get; }
 
 		private readonly List<ICompetitionFactory> _currentFactories = new List<ICompetitionFactory>();
-
 		public IEnumerable<ICompetitionFactory> CurrentFactories => _currentFactories;
         public string CurrentCompetitionNumbersString { get; private set; }
         public ICanvas CurrentCanvas { get; }

@@ -37,6 +37,9 @@ class PreparerC500(Preparer):
         return Riddle(counter, riddle, riddle, str(prod))
 
 
-lim = 256 * 256 * 256 * 256 - 1
-prep = PreparerC500(lim)
-prep.execute()
+if __name__ == "__main__":
+    print("Start")
+    lim = 256 * 256 * 256 * 256 - 1
+    prep = PreparerC500(lim)
+    prep.execute()
+    print("Done")

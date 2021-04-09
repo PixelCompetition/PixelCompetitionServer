@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CompetitionMetaData>
+    <Name>Competition that implements a future protocol by Stephan</Name>
+    <Urls>
+        https://wiki.maglab.space/wiki/PixelCompetition
+    </Urls>
+    <Welcome>Welcome to a future competition by Stephan</Welcome>
+    <Help>
+        This Competition implement a riddle protocol asking for something new
+        ASK {x} {y}
+        --> RIDDLE {x} {y} {riddle}
+
+        PX {x} {y} #{color} {result}
+        --> OK
+        --> Nope --> RIDDLE {x} {y} {riddle}
+
+        x:     x-Coordinate of a pixel
+        y:     y-Coordinate of a pixel
+        color: color encoded as a html color (rgb-values as hex)
+
+        ASK returns a {riddle} for the given coordinate, in this competition it returns a number.
+        PX  sets a pixel by providing the {result} of the riddle.
+
+        {result} shall be something calculated from {riddle} 
+
+        NOTE: Others may solve the riddle faster than you, in this case you get back a nope and the current riddle
+    </Help>
+</CompetitionMetaData>

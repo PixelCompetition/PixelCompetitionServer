@@ -11,5 +11,9 @@ class PreparerC600(PreparerWords):
         self.PostProcessors = [PostProcessorImage(self, self.Cfg)]
 
 
-prep = PreparerC600()
-prep.execute()
+if __name__ == "__main__":
+    print("Start")
+    prep = PreparerC600()
+    prep.execute()
+    print("Done")
+

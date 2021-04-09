@@ -1,5 +1,3 @@
-
-
 class PostProcessor:
     Preparer = None
     Config = None
@@ -10,3 +8,4 @@ class PostProcessor:
 
     def postProcess(self, riddle):
         pass
+

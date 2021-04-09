@@ -4,6 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>F:\dev\git\mag.lab\prj\pixelcompetition\src\dotnet\PixelCompetitionServer\PixelCompetitionServerLib\PixelCompetitionServerLib.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="B\B001\en.xml" />
     <None Remove="B\B003\en.xml" />
@@ -11,6 +15,7 @@
     <None Remove="C\C050\en.xml" />
     <None Remove="C\C100\en.xml" />
     <None Remove="C\C180\en.xml" />
+    <None Remove="C\C310\en.xml" />
     <None Remove="C\C500\en.xml" />
     <None Remove="C\C600\en.xml" />
   </ItemGroup>
@@ -22,6 +27,7 @@
     <EmbeddedResource Include="C\C050\en.xml" />
     <EmbeddedResource Include="C\C100\en.xml" />
     <EmbeddedResource Include="C\C180\en.xml" />
+    <EmbeddedResource Include="C\C310\en.xml" />
     <EmbeddedResource Include="C\C500\en.xml" />
     <EmbeddedResource Include="C\C600\en.xml" />
   </ItemGroup>

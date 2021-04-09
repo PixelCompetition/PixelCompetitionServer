@@ -38,3 +38,11 @@ class FontProvider:
         ttfs = self.loadFonts()
         return ttfs
 
+
+if __name__ == "__main__":
+    print("Start")
+    prov = FontProvider(Config())
+    for font in prov.getFonts():
+        print(font.getname())
+    print("Done")
+

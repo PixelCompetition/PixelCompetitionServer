@@ -41,7 +41,6 @@ class Preparer:
                 outfile.write(line)
                 outfile.write("\n")
 
-
     def loadRiddles(self):
         print("Load Riddles for", self.CompetitionName)
         counter = 0

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PixelCompetitionServerLib</name>
+    </assembly>
+    <members>
+        <member name="T:PixelCompetitionServerLib.PixelCompetitionClientHandler">
+            <summary>
+            Main class to handle a client session against the server, it is initialized by the server on demand
+            and uses ICompetitionFactories to instantiate an ICompetition for each client.
+            </summary>
+        </member>
+        <member name="T:PixelCompetitionServerLib.PixelCompetitionServer">
+            <summary>
+            Server starting TCPListener and start a client handler for each connection.
+            This class should be instatiated by <see cref="T:PixelCompetitionServerLib.PixelCompetitionServerApp" /> using a
+            <see cref="T:PixelCompetitionServerLib.PixelCompetitionServerConfig" />.
+            </summary>
+        </member>
+    </members>
+</doc>

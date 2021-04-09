@@ -1,7 +1,6 @@
 import os
 import glob
 from PIL import Image, ImageDraw, ImageFont
-
 exec(open("../generalVars.py").read())
 
 
@@ -20,11 +19,17 @@ def drawFont(ttf, text, target):
 
 
 def findFonts(text):
-    target = Cfg.getFontsFolder()
-    pattern = os.path.join(Cfg.SystemFontFolder, "*.ttf")
+    cfg = Config()
+    target = cfg.getFontsFolder()
+    pattern = os.path.join(cfg.SystemFontFolder, "*.ttf")
     for ttf in glob.glob(pattern):
         drawFont(ttf, text, target)
 
 
-findFonts("groß und KLeiN")
+if __name__ == "__main__":
+    print("Start")
+    findFonts("groß und KLeiN")
+    print("Done")
+
+
 
